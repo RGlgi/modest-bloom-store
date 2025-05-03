@@ -22,45 +22,41 @@
 
 .category-card img {
   width: 100%;
-  height: 300px; /* fixed height to make all same size */
-  object-fit: cover; /* crop and center image inside box */
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 10px;
 }
 
-.category-title {
+/* Ensure the card has a set height */
+.full {
+  height: 500px;
+}
+
+.half {
+  height: 280px;
+}
+
+/* TITLE FIX */
+.category-title2 {
   position: absolute;
-  left: 2rem;
   top: 50%;
+  left: 2rem;
   transform: translateY(-50%);
   font-size: 2.5rem;
   font-weight: 600;
   color: white;
   text-transform: lowercase;
-  background: none;
-  padding: 0;
-  margin: 0;
   z-index: 2;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* optional for visibility */
-}
-/* First row card: taller */
-.full-width .category-card img {
-  height: 500px; /* taller image */
-}
-/* Second row cards: shorter and uniform */
-.half-width .category-card {
-  height: 280px;
-}
-.min-page-height {
-  min-height: 100vh; /* at least full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-/* .full-width .full {
-  width: 100%;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
 }
 
-.half-width .half {
-  width: 50%;
-} */
+/* OPTIONAL: Fix for hidden text due to overflow */
+.category-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+  z-index: 1;
+}

@@ -6,6 +6,7 @@
 }
 
 .clothes-card {
+  position: relative;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
@@ -55,4 +56,53 @@
   margin-top: 0.5rem;
   font-size: 1.1rem;
   font-weight: 600;
+}
+.favorite-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: none;
+  z-index: 2;
+}
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+}
+.favorite-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  border: none;
+}
+.search-wrong {
+  padding: 2rem;
+  max-width: auto;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #b5b5b55f;
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.search-wrong a {
+  text-decoration: none;
+  color: rgb(82, 77, 73);
+}
+.search-wrong a:hover {
+  color: rgb(255, 166, 92);
 }

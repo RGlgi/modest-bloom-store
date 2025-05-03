@@ -10,7 +10,7 @@ const CategoryBlocks: React.FC = () => {
       <div className="category-row full-width">
         <Link to="/category/skirts" className="category-card full">
           <img src={CategoryData[0].src} alt={CategoryData[0].name} />
-          <div className="category-title">{CategoryData[0].name}</div>
+          <div className="category-title2">{CategoryData[0].name}</div>
         </Link>
       </div>
 
@@ -18,12 +18,12 @@ const CategoryBlocks: React.FC = () => {
       <div className="category-row half-width">
         {CategoryData.slice(1, 3).map((cat) => (
           <Link
-            to={`/category/${cat.category}`} // 🔁 dynamically link
+            to={`/category/${cat.category}`}
             className="category-card half"
             key={cat.id}
           >
             <img src={cat.src} alt={cat.name} />
-            <div className="category-title">{cat.name}</div>
+            <div className="category-title2">{cat.name}</div>
           </Link>
         ))}
       </div>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useUser } from './UserContext.tsx'
 import './HeaderBar.css'
 
 const HeaderBar = () => {
+  const { name } = useUser()
   const [showDropdown, setShowDropdown] = useState(false)
   const [selectedOption, setSelectedOption] = useState('USD | TR')
-
   const handleSelect = (option) => {
     setSelectedOption(option)
     setShowDropdown(false)
@@ -15,6 +16,9 @@ const HeaderBar = () => {
     <div className="header-bar">
       <div className="company-name">
         <Link to="/main">MODEST BLOOM</Link>
+      </div>
+      <div className="center-welcome">
+        {name && <span>Welcome, {name}!</span>}
       </div>
       <div className="selector" onClick={() => setShowDropdown(!showDropdown)}>
         {selectedOption} ▾

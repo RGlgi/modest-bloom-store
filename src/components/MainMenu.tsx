@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './MainMenu.css'
 import searchIcon from './assets/images/search-icon.png'
 import accountIcon from './assets/images/account-icon.png'
@@ -9,6 +10,20 @@ import { useCart } from './CartContext.tsx'
 
 const MainMenu = () => {
   const { cartItems } = useCart()
+  const [query, setQuery] = useState('')
+  const navigate = useNavigate()
+
+  const handleSearch = () => {
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query.trim().toLowerCase())}`)
+    }
+  }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSearch()
+    }
+  }
+
   return (
     <div className="main-menu">
       <div className="menu-left">
@@ -58,8 +73,15 @@ const MainMenu = () => {
       </div>
       <div className="store-name">
         <div className="search-container">
-          <input type="text" className="search-input" placeholder="Search..." />
-          <button className="icon-button">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+          <button className="icon-button" onClick={handleSearch}>
             <img src={searchIcon} alt="Search" />
           </button>
         </div>

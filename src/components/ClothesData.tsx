@@ -87,14 +87,7 @@ const ClothesData = [
     price: '$24.99',
     category: 'pajamas',
   },
-  {
-    id: 9,
-    src: [img1, blank, blank],
-    alt: 'blank',
-    name: 'Blue Pajama',
-    price: '$27.99',
-    category: 'pajamas',
-  },
+
   {
     id: 10,
     src: [img2, blank, blank],
@@ -239,14 +232,7 @@ const ClothesData = [
     price: '$208.99',
     category: 'Accessories',
   },
-  {
-    id: 27,
-    src: [neck2, blank, blank],
-    alt: 'neck2',
-    name: 'necklace2',
-    price: '$209.99',
-    category: 'Accessories',
-  },
+
   {
     id: 28,
     src: [socks1, blank, blank],
@@ -286,6 +272,22 @@ const ClothesData = [
     name: 'necklace2',
     price: '$209.99',
     category: 'Accessories',
+  },
+  {
+    id: 33,
+    src: [neck2, blank, blank],
+    alt: 'neck2',
+    name: 'necklace2',
+    price: '$209.99',
+    category: 'Accessories',
+  },
+  {
+    id: 34,
+    src: [img1, blank, blank],
+    alt: 'blank',
+    name: 'Blue Pajama',
+    price: '$27.99',
+    category: 'pajamas',
   },
 ]
 
