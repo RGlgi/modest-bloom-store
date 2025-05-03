@@ -1,0 +1,16 @@
+Modest Bloom – Custom License
+
+Copyright (c) 2025 Rabia Gelgi
+
+All rights reserved.
+
+This project is for personal and professional portfolio use only.
+
+You may:
+- View and explore the source code
+
+You may not:
+- Copy, reproduce, or redistribute any part of this repository (code, images, or design)
+- Use the code in commercial or public-facing projects
+
+For licensing inquiries, please contact the author.
