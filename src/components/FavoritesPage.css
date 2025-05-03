@@ -1,7 +1,7 @@
 .favorites-page {
   padding: 2rem;
   min-height: 100vh;
-  background-color: #f9f9f9;
+  background: none;
 }
 
 .favorite-items {

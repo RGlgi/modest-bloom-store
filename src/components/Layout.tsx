@@ -4,6 +4,7 @@ import HeaderBar from './HeaderBar.tsx'
 import MainMenu from './MainMenu.tsx'
 import Footer from './Footer.tsx'
 import { Outlet } from 'react-router-dom'
+import '../App.css'
 
 const Layout: React.FC = () => {
   return (

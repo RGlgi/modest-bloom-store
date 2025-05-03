@@ -5,21 +5,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-image: url('../src//components/assets/images/clothes-logo.png'); /* adjust path if needed */
+  background-image: url('/public/clothes-logo.png'); /* if in public folder */
   background-repeat: no-repeat;
-  background-size: contain; /* or cover if you want it to fill */
-  background-position: center;
-  background-attachment: fixed; /* keeps it from scrolling */
+  background-position: center top;
+  background-size: contain;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -44,4 +39,24 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+.app-container {
+  background-image: url('/public/clothes-logo.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6); /* or any light overlay */
+  z-index: -1;
 }
