@@ -1,0 +1,48 @@
+.trends-section {
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.trends-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.trend-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+}
+
+.trend-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  min-width: 150px;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.trend-card:hover {
+  transform: scale(1.05);
+}
+
+.trend-card img {
+  width: 100%;
+  height: 180px; /* You can adjust this height */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.trend-card .info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.trend-card a {
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+}
